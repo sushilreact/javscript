@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #000;">
+    
+</body>
+</html>
+<script>
+    const mainelm = document.createElement('div')
+    mainelm.className= "main"
+    mainelm.id = "idNumber-" + Math.round(Math.random()*10 + 1)
+    mainelm.setAttribute("titleName", "customeTitle")
+    textval = document.createTextNode("This is my custome Child Text")
+    mainelm.classList = "main myCustomeClass"
+    mainelm.appendChild(textval)
+    document.body.appendChild(mainelm)
+
+    console.log(mainelm)
+</script>
+<style> 
+    .myCustomeClass{ font-size: 20px; color: #fff; padding: 5px; background: #144d0c;}
+</style>

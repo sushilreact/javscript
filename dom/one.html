@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushil</title>
+</head>
+
+<body class="bgBlack">
+    <div id="title" class="sushil">
+    Hello My name is sushil <span style="display: none;"> I am innner Content</span>
+    </div>
+    <div id="orderlist">
+    <ul> 
+        <li class="list-item">one</li>
+        <li class="list-item">two</li>
+        <li class="list-item">three</li>
+        <li class="list-item">fourth</li>
+    </ul>
+</div>
+</body>
+</html>
+<style>
+    .bgBlack{ background-color: black; color: aliceblue;}
+    .jewllow{ background: red; color: yellow; font-size: 20px; padding: 10px; list-style: ;}
+</style>
+
+<script>
+    const templistwe = document.getElementsByClassName('list-item')
+     const arrayitemss = Array.from(templistwe)
+     arrayitemss.forEach((item)=>{
+    //  item.classList.add("jewllow")
+       item.style.color="red";
+       item.style.backgroundColor="green";
+       item.style.padding="10px";
+       item.style.fontSize="28px"
+     })
+   
+  </script>

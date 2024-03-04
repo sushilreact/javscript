@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth</title>
+</head>
+<body>
+    <ul class="langu">
+        <li>Javascript</li>
+        
+    </ul>
+</body>
+</html>
+<script>
+//  const addlanguage=(val)=>{
+
+//   const list = document.createElement("li")
+//       list.innerText=`${val}`
+      
+//       document.querySelector(".langu").appendChild(list)
+
+
+//     }
+//     addlanguage("VB")
+//     addlanguage("C++")
+//     addlanguage("Python")
+
+const addlang = (val) =>{
+    const list = document.createElement('li')
+    list.appendChild(document.createTextNode(val))
+    document.querySelector('.langu').appendChild(list)
+   //console.log(`This li ${list}`)
+}
+
+addlang("golang")
+addlang("java")
+addlang("php")
+
+const edit = document.querySelector("ul.langu li:nth-child(2)")
+//edit.innerHTML="Helli I am edit"
+//edit.appendChild(document.createTextNode("Hello I am sushil"))
+//const linew = document.createElement("li")
+//linew.textContent = "Hello I am appending With text content"
+//edit.replaceWith(linew)
+//console.log(`this is edit ${edit}`)
+
+// Second Method 
+
+const firstelm = document.querySelector("ul.langu li:nth-child(1)")
+firstelm.outerHTML= "<li>THis is replace First</li>"
+
+
+// Remove
+
+const removeelm = document.querySelector("ul.langu li:last-child")
+removeelm.remove()
+
+</script>
