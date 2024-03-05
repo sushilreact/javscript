@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainWrap">
+        <div class="innerWrap">
+<span>gray</span>
+<span>yellow</span>
+<span>green</span>
+<span>white</span>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    
+    .mainWrap{ width: 100%; height: 100%;  display: flex; justify-content: center; align-items: center;}
+    .innerWrap{ width: 800px; margin: 0 auto; display: flex; gap: 20px; justify-content: center;}
+    .innerWrap span{ display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border: 1px solid #000; cursor: pointer;}
+    .innerWrap span:nth-child(1){ background: gray;}
+    .innerWrap span:nth-child(2){ background: yellow;}
+    .innerWrap span:nth-child(3){ background: white;}
+    .innerWrap span:nth-child(4){ background: green;}
+
+</style>
+
+<script>
+   const buttonSpan =  document.querySelectorAll(".innerWrap span")
+   const bodyWrap = document.querySelector("body")
+   buttonSpan.forEach((button)=>{
+    button.addEventListener("click", ((e)=>{
+       //console.log(e)
+       const colorName = e.target.firstChild.data 
+   switch (colorName) {
+   
+    case colorName:
+    bodyWrap.style.backgroundColor = colorName
+    break;
+    default:
+        break;
+   }
+
+    }))
+   })
+</script>
