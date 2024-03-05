@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital</title>
+</head>
+<body>
+    <div class="digitalMain">
+Digital Watch
+<div class="watchOutput" id="digi"></div>
+    </div>
+</body>
+</html>
+<style>
+    body{ background: #000; color: #fff;}
+    .digitalMain{ width: 400px; margin: 0 auto; border: solid 1px #fff; display: flex; justify-content: center; align-items: center; flex-direction: column; padding: 20px; gap: 20px;}
+    .digitalMain h2{ font-size: 20px; }
+    .watchOutput{ border-radius: 10px; background: #f1ed01; width: 100px; color: #000; display: flex; justify-content: center; align-items: center; padding: 10px;}
+</style>
+
+<script>
+   const getTime = document.getElementById('digi')
+   setInterval(function(){
+    
+    const date = new Date()
+    getTime.innerText = date.toLocaleTimeString()
+   },1000)
+
+</script>
